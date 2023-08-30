@@ -27,11 +27,11 @@
           <img id="background_image" class="background_image" src="/images/P1_1.png" alt="main image" />
           <div class="title">
             <span class="quotationMarks markUp">&ldquo;</span>
-            <h1>
-              8-PHASE
-              <br />
-              HENM
-              TECHNOLOGY
+            <h1><span>
+                8-PHASE</span>
+              <br /><span>
+                HENM
+                TECHNOLOGY</span>
             </h1>
             <span class="quotationMarks markDown">&rdquo;</span>
           </div>
@@ -47,10 +47,10 @@
             <img src="/images/P1_2.jpg" class="imgCircle circle1" />
           </div>
           <div class="contentBox contentRight">
-            <div id="subtitleBox1" class="subtitleBox ">
+            <div id="subtitleBox1" class="subtitleBox fadeReadyBox">
               <img src="/images/icon_U.png" alt="" />
-              <h3 class="subtit txt-right margin-right">Unique HENM</h3>
-              <h3 class="subtit txt-right">technology</h3>
+              <h3 class="subtit txt-right margin-right fadeReady1">Unique HENM</h3>
+              <h3 class="subtit txt-right fadeReady2">technology</h3>
             </div>
             <div class="leftPadding">
               <p class="txt-right">
@@ -71,10 +71,10 @@
         <!-- box2 -->
         <div class="sec2body">
           <div class="contentBox contentLeft">
-            <div id="subtitleBox2" class="subtitleBox">
+            <div id="subtitleBox2" class="subtitleBox fadeReadyBox">
               <img src="/images/icon_8.png" alt="">
-              <h3 class="subtit margin-left txt-left">8-Phase High Function</h3>
-              <h3 class="subtit txt-left">Process Technology</h3>
+              <h3 class="subtit margin-left txt-left fadeReady1">8-Phase High Function</h3>
+              <h3 class="subtit txt-left fadeReady2">Process Technology</h3>
             </div>
             <div class="rightPadding">
               <p class="txt-left">

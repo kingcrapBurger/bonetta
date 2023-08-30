@@ -4,13 +4,12 @@ let backgroundImage;
 let MainImageHeight;
 let c_width;
 
-
 // onload
 window.onload = function () {
   deviceWidth();
   MainImageHeight = getParentHeight();
   adjustParentHeight(MainImageHeight);
-  headerScroll();
+  // headerScroll();
 
   if (c_width < 601) {
     sec1resize(MainImageHeight);
@@ -27,7 +26,7 @@ window.addEventListener("resize", function () {
   }
 });
 //scroll
-window.addEventListener("scroll", headerScroll);
+// window.addEventListener("scroll", headerScroll);
 
 // 모바일 sec1 디자인 변경
 // 테스트중
@@ -58,27 +57,25 @@ function adjustParentHeight(element) {
   sec1.style.height = `${element}px`;
 }
 
-function headerScroll() {
-  let scrollTop = window.scrollY;
-  let winBottom = scrollTop + window.innerHeight;
+// function headerScroll() {
+//   let scrollTop = window.scrollY;
+//   let winBottom = scrollTop + window.innerHeight;
 
-  let actReady1Elements = document.querySelectorAll(".fadeReady1");
-  let actReady2Elements = document.querySelectorAll(".fadeReady2");
-  actReady1Elements.forEach((element) => {
-    let location = element.offsetTop;
-    console.log("location :" + location);
-    console.log("winBottom :" + winBottom);
-    if (winBottom - 30 > location) {
-      element.classList.add("fadeIn1");
-      // element.classList.remove("fadeReady1");
-    }
-  });
-  actReady2Elements.forEach((element) => {
-    let location = element.offsetTop;
-    if (winBottom - 30 > location) {
-      element.classList.add("fadeIn2");
-      // element.classList.remove("fadeReady2");
-    }
-  });
-}
-
+//   let actReady1Elements = document.querySelectorAll(".fadeReady1");
+//   let actReady2Elements = document.querySelectorAll(".fadeReady2");
+//   actReady1Elements.forEach((element) => {
+//     let location = element.offsetTop;
+//     console.log("location :" + location);
+//     console.log("winBottom :" + winBottom);
+//     if (winBottom - 30 > location) {
+//       element.classList.add("fadeIn1");
+//       // element.classList.remove("fadeReady1");
+//     }
+//   });
+//   actReady2Elements.forEach((element) => {
+//     let location = element.offsetTop;
+//     if (winBottom - 30 > location) {
+//       element.classList.add("fadeIn2");
+//       // element.classList.remove("fadeReady2");
+//     }
+//   });
