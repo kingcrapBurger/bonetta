@@ -63,13 +63,13 @@
 
         <div class="sec2body grid_wrapp body2">
           <div class="flexRow">
-            <div class="underLine"><span class="logo">Bonetta</span><br>
+            <div class="underLine" id="line1"><span class="logo">Bonetta</span><br>
               Fine
             </div>
-            <div class="underLine"><span class="logo">Bonetta</span><br>
+            <div class="underLine" id="line2"><span class="logo">Bonetta</span><br>
               Volume
             </div>
-            <div class="underLine"><span class="logo">Bonetta</span><br>
+            <div class="underLine" id="line3"><span class="logo">Bonetta</span><br>
               Deep
             </div>
           </div>

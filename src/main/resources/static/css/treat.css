@@ -22,6 +22,7 @@ img {
 
 .logo {
   font-family: 'Alex Brush', cursive;
+  font-size: 2.5rem;
 }
 
 .logoSmall {
@@ -117,6 +118,43 @@ h3 {
 .sec2body.grid_wrapp.body1>div:nth-child(3) {
   grid-column: 1/span 12;
 }
+.sec2body.grid_wrapp.body2>div:nth-child(1) div {
+  width: 10rem;
+  margin: 2.5rem;
+  text-align: center;
+}
+
+.sec2body.grid_wrapp.body2>div:nth-child(1) .underLine {
+  border-bottom: 1px solid;
+  padding-bottom: 5px;
+}
+
+.body2>.flexRow {
+  align-items: flex-end;
+}
+
+.body2>.flexRow .underLine:hover {
+  cursor: pointer;
+}
+
+/* onclick 이벤트 */
+/* .body2>.flexRow .underLine:nth-child(2) {
+  font-size: 2.5rem;
+  color: #a8315f;
+  border-color: #a8315f;
+} */
+
+.enlarge {
+  font-size: 2.5rem;
+  color: #a8315f;
+  border-color: #a8315f;
+  transition: all ease-out 500ms;
+}
+
+.enlargeLogo {
+  font-size: 2.8rem;
+  transition: all ease-out 500ms;
+}
 
 .flexCol {
   display: flex;
@@ -164,17 +202,6 @@ h3 {
   grid-column: 1/span 12;
 }
 
-.sec2body.grid_wrapp.body2>div:nth-child(1) div {
-  width: 10rem;
-  margin: 2.5rem;
-  text-align: center;
-}
-
-.sec2body.grid_wrapp.body2>div:nth-child(1) .underLine {
-  border-bottom: 1px solid;
-  padding-bottom: 5px;
-}
-
 .sec2body.grid_wrapp.body3>h3,
 img {
   grid-column: 1/span 12;
@@ -189,6 +216,38 @@ img {
   max-width: 700px;
 }
 
+/* 애니메이션 관련 */
+.title {
+  transform: scale(0.94);
+  animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+}
+
+.title span {
+  display: inline-block;
+  opacity: 0;
+  filter: blur(4px);
+}
+
+.title span:nth-child(1) {
+  animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.title span:nth-child(2) {
+  animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+@keyframes scale {
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
 @media screen and (min-width:1024px) and (max-width: 1439px) {
   body {
     font-size: 22px;

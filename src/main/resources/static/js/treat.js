@@ -79,3 +79,23 @@ function adjustParentHeight(element) {
 //       // element.classList.remove("fadeReady2");
 //     }
 //   });
+let underLine = Array.from(document.querySelectorAll(".underLine"));
+
+underLine.forEach((element) => {
+  element.addEventListener("click", function (event) {
+    let element = event.target;
+    let siblings = element.parentElement.children;
+    let id = event.target.id;
+
+    console.log("시블링은 " + siblings);
+    for (i = 0; i < siblings.length; i++) {
+      if (siblings[i].classList.contains("enlarge")) {
+        siblings[i].classList.remove("enlarge");
+        siblings[i].firstChild.classList.remove("enlargeLogo");
+      }
+    }
+    console.log("id는 ", id);
+    element.classList.add("enlarge");
+    element.firstChild.classList.add("enlargeLogo");
+  });
+});
