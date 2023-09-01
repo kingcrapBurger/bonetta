@@ -64,29 +64,36 @@ function headerScroll() {
   // let scrollTop = window.scrollY;
   // let winBottom = scrollTop + window.innerHeight;
 
-  let actReady1Elements = Array.from(document.querySelectorAll(".fadeReady1"));
-  let actReady2Elements = Array.from(document.querySelectorAll(".fadeReady2"));
-  actReady1Elements.forEach((element) => {
+  // let actReady1Elements = Array.from(document.querySelectorAll(".fadeReady1"));
+  // let actReady2Elements = Array.from(document.querySelectorAll(".fadeReady2"));
+  let fadeReadyBox = Array.from(document.querySelectorAll(".fadeReadyBox"));
+
+  fadeReadyBox.forEach((element) => {
     // let location = element.offsetTop;
+    let childrenNodes = element.children;
     let lect = element.getBoundingClientRect();
-    let location = lect.top;
+    let location = lect.bottom;
     // console.log("location :" + location);
     // console.log("winBottom :" + winBottom);
-    if (c_height > location + 100) {
-      element.classList.add("fadeIn1");
+    if (c_height > location) {
+      element.classList.add("scaling");
+      for (i = 0; i < childrenNodes.length; i++) {
+        let child = childrenNodes[i];
+        child.classList.add("fadeIn" + (i + 1));
+      }
       // element.classList.remove("fadeReady1");
     }
   });
-  actReady2Elements.forEach((element) => {
-    // let location = element.offsetTop;
-    let lect = element.getBoundingClientRect();
-    let location = lect.top;
-    console.log("location :" + location);
-    console.log("c_height :" + c_height);
-    if (c_height > location + 100) {
-      element.classList.add("fadeIn2");
-      // element.classList.remove("fadeReady2");
-    }
-  });
+  // actReady2Elements.forEach((element) => {
+  //   // let location = element.offsetTop;
+  //   let lect = element.getBoundingClientRect();
+  //   let location = lect.top;
+  //   console.log("location :" + location);
+  //   console.log("c_height :" + c_height);
+  //   if (c_height > location + 100) {
+  //     element.classList.add("fadeIn2");
+  //     // element.classList.remove("fadeReady2");
+  //   }
+  // });
 }
 

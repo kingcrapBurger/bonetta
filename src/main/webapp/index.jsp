@@ -48,7 +48,7 @@
           </div>
           <div class="contentBox contentRight">
             <div id="subtitleBox1" class="subtitleBox fadeReadyBox">
-              <img src="/images/icon_U.png" alt="" />
+              <img src="/images/icon_U.png" alt="" class="fadeReady1" />
               <h3 class="subtit txt-right margin-right fadeReady1">Unique HENM</h3>
               <h3 class="subtit txt-right fadeReady2">technology</h3>
             </div>
@@ -72,9 +72,9 @@
         <div class="sec2body">
           <div class="contentBox contentLeft">
             <div id="subtitleBox2" class="subtitleBox fadeReadyBox">
-              <img src="/images/icon_8.png" alt="">
-              <h3 class="subtit margin-left txt-left">8-Phase High Function</h3>
-              <h3 class="subtit txt-left">Process Technology</h3>
+              <img src="/images/icon_8.png" alt="" class="fadeReady1">
+              <h3 class="subtit margin-left txt-left fadeReady1">8-Phase High Function</h3>
+              <h3 class="subtit txt-left fadeReady2">Process Technology</h3>
             </div>
             <div class="rightPadding">
               <p class="txt-left">
@@ -103,10 +103,10 @@
             <img src="/images/P1_4.jpg" class="imgCircle circle3" />
           </div>
           <div class="contentBox contentRight">
-            <div id="subtitleBox3" class="subtitleBox">
-              <img src="/images/icon_G.png" alt="">
-              <h3 class="subtit txt-right margin-right">Global product</h3>
-              <h3 class="subtit txt-right">Global product</h3>
+            <div id="subtitleBox3" class="subtitleBox fadeReadyBox">
+              <img src="/images/icon_G.png" alt="" class="fadeReady1">
+              <h3 class="subtit txt-right margin-right fadeReady1">Global product</h3>
+              <h3 class="subtit txt-right fadeReady2">Global product</h3>
             </div>
             <div class="leftPadding">
               <p class="txt-right">
@@ -121,10 +121,10 @@
         <!-- box4 -->
         <div class="sec2body">
           <div class="contentBox contentLeft">
-            <div id="subtitleBox4" class="subtitleBox">
-              <img src="/images/icon_I.png" alt="">
-              <h3 class="subtit txt-left">injection pressure</h3>
-              <h3 class="subtit margin-left txt-left">Stable and constant</h3>
+            <div id="subtitleBox4" class="subtitleBox fadeReadyBox">
+              <img src="/images/icon_I.png" alt="" class="fadeReady1">
+              <h3 class="subtit txt-left fadeReady1">injection pressure</h3>
+              <h3 class="subtit margin-left txt-left fadeReady2">Stable and constant</h3>
             </div>
             <div class="rightPadding">
               <p class="txt-left">
