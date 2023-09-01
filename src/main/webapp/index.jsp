@@ -73,8 +73,8 @@
           <div class="contentBox contentLeft">
             <div id="subtitleBox2" class="subtitleBox fadeReadyBox">
               <img src="/images/icon_8.png" alt="">
-              <h3 class="subtit margin-left txt-left fadeReady1">8-Phase High Function</h3>
-              <h3 class="subtit txt-left fadeReady2">Process Technology</h3>
+              <h3 class="subtit margin-left txt-left">8-Phase High Function</h3>
+              <h3 class="subtit txt-left">Process Technology</h3>
             </div>
             <div class="rightPadding">
               <p class="txt-left">
