@@ -41,6 +41,15 @@ h3 {
   font-size: 3.125rem;
 }
 
+.flexCol {
+  display: flex;
+  flex-direction: row;
+}
+
+.flexRow {
+  display: flex;
+  flex-direction: row;
+}
 *,
 *::before,
 *::after {
@@ -82,13 +91,112 @@ h3 {
   margin: 0 auto;
 }
 
-/* sec2 */
+/* sec1 */
+#clickBox {
+  position: absolute;
+  width: 100%;
+  grid-column: 1/span 12;
+  z-index: 101;
+}
+
+#clickBox .hotspot.btnFocus .logo {
+  font-size: 1.3rem;
+}
+
+#clickBox .hotspot {
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  background-image: url("/images/2.treat/rect.png");
+  background-size: cover;
+  border-radius: 50%;
+  padding: 0.3rem;
+  opacity: 0.5;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+#clickBox .hotspot:hover {
+  opacity: 1;
+}
+
+#clickBox .hotspot.btnFocus {
+  font-size: 1rem;
+  width: fit-content;
+  height: auto;
+  opacity: 0.8;
+  border-radius: 5%;
+  animation-name: btnFocus;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes btnFocus {
+  from {
+    font-size: 1rem;
+    width: fit-content;
+    height: auto;
+  }
+
+  to {
+    width: fit-content;
+    height: auto;
+  }
+}
+
+#clickBox .hotspot:nth-of-type(1) {
+  left: 68%;
+  top: 29%;
+}
+
+#clickBox .hotspot:nth-of-type(2) {
+  left: 57.66%;
+  top: 34%;
+}
+
+#clickBox .hotspot:nth-of-type(3) {
+  left: 66%;
+  top: 44%;
+}
+
+#clickBox .hotspot:nth-of-type(4) {
+  left: 60%;
+  top: 39%;
+}
+
+#clickBox .hotspot:nth-of-type(5) {
+  left: 54.27%;
+  top: 44%;
+}
+
+#clickBox .hotspot:nth-of-type(6) {
+  left: 61%;
+  top: 48%;
+}
+
+#clickBox .hotspot:nth-of-type(7) {
+  left: 58%;
+  top: 56%;
+}
+
+#clickBox .hotspot:nth-of-type(8) {
+  left: 62.5%;
+  top: 60%;
+}
+
+#clickBox .hotspot:nth-of-type(9) {
+  left: 61.3%;
+  top: 66%;
+}
+
+/* sec2 body1*/
 #sec2 {
   margin: 5rem 2rem;
 }
 
 .sec2body {
-  margin: 8rem 0;
+  margin: 11rem 0;
 }
 
 .sec2.grid_wrapp {
@@ -108,6 +216,53 @@ h3 {
   justify-content: space-around;
 }
 
+.sec2body.body1>.carousel {
+  display: flex;
+  position: relative;
+  width: 100%;
+  max-width: 1500px;
+  height: 100%;
+  align-items: center;
+}
+
+.carousel>.carousel__list {
+  display: flex;
+  list-style: none;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  perspective: 300px;
+}
+
+.carousel>.carousel__list .carousel__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.5);
+  /* width: 150px;
+  height: 250px;
+  border-radius: 12px;
+  box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.5); */
+  position: absolute;
+  transition: all .3s ease-in;
+}
+
+.carousel>.carousel__list .carousel__item[data-pos="-1"] {
+  z-index: 1;
+  opacity: 0.7;
+  transform: translateX(-20%) scale(0.8);
+}
+
+.carousel>.carousel__list .carousel__item[data-pos="0"] {
+  z-index: 2;
+}
+
+.carousel>.carousel__list .carousel__item[data-pos="1"] {
+  z-index: 1;
+  opacity: 0.7;
+  transform: translateX(20%) scale(0.8);
+}
 .sec2body.body1>div:nth-child(3) {
   width: 60%;
   text-align: center;
@@ -118,6 +273,7 @@ h3 {
 .sec2body.grid_wrapp.body1>div:nth-child(3) {
   grid-column: 1/span 12;
 }
+/* sec2 body2 */
 .sec2body.grid_wrapp.body2>div:nth-child(1) div {
   width: 10rem;
   margin: 2.5rem;
@@ -137,13 +293,46 @@ h3 {
   cursor: pointer;
 }
 
-/* onclick 이벤트 */
-/* .body2>.flexRow .underLine:nth-child(2) {
-  font-size: 2.5rem;
-  color: #a8315f;
-  border-color: #a8315f;
-} */
+/* slider */
+.sec2body.grid_wrapp.body2 .slideWrapper {
+  position: relative;
+  overflow: hidden;
+}
 
+.sec2body.grid_wrapp.body2 .slideWrapper .slideContainer {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  /* justify-content: center; */
+  scroll-behavior: smooth;
+  overflow: scroll;
+}
+
+.slideContainer {
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* Internet Explorer 10+ */
+  touch-action: none;
+}
+
+/* WebKit */
+.slideContainer::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.sec2body.grid_wrapp.body2 .slideWrapper .slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 100%;
+  width: 100%;
+  height: 100%;
+  row-gap: 3rem;
+}
+/* onclick 이벤트 */
 .enlarge {
   font-size: 2.5rem;
   color: #a8315f;
@@ -154,16 +343,6 @@ h3 {
 .enlargeLogo {
   font-size: 2.8rem;
   transition: all ease-out 500ms;
-}
-
-.flexCol {
-  display: flex;
-  flex-direction: row;
-}
-
-.flexRow {
-  display: flex;
-  flex-direction: row;
 }
 
 .graphBox {
@@ -196,6 +375,11 @@ h3 {
   vertical-align: middle;
 }
 
+.sec2body.grid_wrapp.body2 .slideWrapper .slide div:nth-of-type(2) p {
+  width: 60%;
+  text-align: center;
+  margin: 0 auto;
+}
 .sec2body.grid_wrapp.body2>div:nth-child(1),
 .sec2body.grid_wrapp.body2>div:nth-child(2),
 .sec2body.grid_wrapp.body2>div:nth-child(3) {
@@ -208,7 +392,8 @@ img {
 }
 
 .sec2body.grid_wrapp.body3>p {
-  grid-column: 3/span 8;
+  grid-column: 1/span 12;
+    width: 60%;
   text-align: center;
 }
 
@@ -248,6 +433,7 @@ img {
     filter: blur(0);
   }
 }
+
 @media screen and (min-width:1024px) and (max-width: 1439px) {
   body {
     font-size: 22px;

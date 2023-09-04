@@ -9,6 +9,7 @@ window.onload = function () {
   deviceWidth();
   MainImageHeight = getParentHeight();
   adjustParentHeight(MainImageHeight);
+  adjustClickboxHeight(MainImageHeight);
   // headerScroll();
 
   if (c_width < 601) {
@@ -20,6 +21,7 @@ window.addEventListener("resize", function () {
   deviceWidth();
   MainImageHeight = getParentHeight();
   adjustParentHeight(MainImageHeight);
+  adjustClickboxHeight(MainImageHeight);
 
   if (c_width < 601) {
     sec1resize(MainImageHeight);
@@ -56,6 +58,10 @@ function getParentHeight() {
 function adjustParentHeight(element) {
   sec1.style.height = `${element}px`;
 }
+function adjustClickboxHeight(element) {
+  let clickBox = document.querySelector("#clickBox");
+  clickBox.style.height = `${element}px`;
+}
 
 // function headerScroll() {
 //   let scrollTop = window.scrollY;
@@ -81,21 +87,102 @@ function adjustParentHeight(element) {
 //   });
 let underLine = Array.from(document.querySelectorAll(".underLine"));
 
-underLine.forEach((element) => {
-  element.addEventListener("click", function (event) {
-    let element = event.target;
-    let siblings = element.parentElement.children;
-    let id = event.target.id;
+let slidesContainer = document.getElementById("slideContainer");
+let slide = document.querySelector(".slide");
+let selectedElement = null;
 
-    console.log("시블링은 " + siblings);
+underLine.forEach((element, index) => {
+  element.addEventListener("click", function (event) {
+    let element = event.currentTarget;
+    let siblings = element.parentElement.children;
+    let id = event.currentTarget.id;
+
+    let targetIndex = parseInt(id.replace("line", "")) - 1;
+    // 이전 요소의 인덱스 값
+    let currentIndex = selectedElement ? underLine.indexOf(selectedElement) : 0;
+    console.log("targetIndex 는 ", targetIndex);
+    console.log("currentIndex 는 ", currentIndex);
+
+    // 슬라이드 이동
+    let slideWidth = slide.clientWidth;
+    let moveAmount = (targetIndex - currentIndex) * slideWidth;
+    slidesContainer.scrollLeft += moveAmount;
+
+    selectedElement = element;
+
     for (i = 0; i < siblings.length; i++) {
       if (siblings[i].classList.contains("enlarge")) {
         siblings[i].classList.remove("enlarge");
         siblings[i].firstChild.classList.remove("enlargeLogo");
       }
     }
-    console.log("id는 ", id);
     element.classList.add("enlarge");
     element.firstChild.classList.add("enlargeLogo");
   });
 });
+
+// 메인이미지 clickBox 처리
+let hotspot = document.querySelectorAll(".hotspot");
+
+hotspot.forEach(function (element) {
+  element.addEventListener("click", function () {
+    smallBtn(element);
+  });
+});
+
+function smallBtn(element) {
+  if (element.classList.contains("btnFocus")) {
+    element.innerHTML = "";
+    element.classList.toggle("btnFocus");
+  } else {
+    hotspot.forEach(function (element) {
+      element.innerHTML = "";
+      element.classList.remove("btnFocus");
+    });
+    let content = element.dataset["content"];
+    element.innerHTML = content;
+    element.classList.add("btnFocus");
+  }
+}
+
+// carousel item 처리
+let carouselList = document.querySelector(".carousel__list");
+let carouselItems = document.querySelectorAll(".carousel__item");
+let elems = Array.from(carouselItems);
+
+carouselList.addEventListener("click", function (event) {
+  var newActive = event.target.closest(".carousel__item");
+  console.log(newActive);
+  var isItem = newActive.closest(".carousel__item");
+  console.log("isItem :", isItem);
+  update(newActive);
+});
+
+let update = function (newActive) {
+  let newActivePos = newActive.dataset.pos;
+  console.log("newActivePos :", newActivePos);
+
+  let current = elems.find((elem) => elem.dataset.pos == 0);
+  let prev = elems.find((elem) => elem.dataset.pos == -1);
+  let next = elems.find((elem) => elem.dataset.pos == 1);
+
+  [current, prev, next].forEach((item) => {
+    var itemPos = item.dataset.pos;
+
+    item.dataset.pos = getPos(itemPos, newActivePos);
+  });
+};
+
+let getPos = function (current, active) {
+  let diff = current - active;
+  console.log("diff :", diff);
+
+  if (Math.abs(current - active) > 1) {
+    return -current;
+  }
+
+  return diff;
+};
+
+
+
