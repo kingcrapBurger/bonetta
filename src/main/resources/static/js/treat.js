@@ -23,20 +23,20 @@ window.addEventListener("resize", function () {
   MainImageHeight = getParentHeight();
   adjustParentHeight(MainImageHeight);
   adjustClickboxHeight(MainImageHeight);
-  
+
   if (c_width < 601) {
     changeImg(c_width);
     sec1resize(MainImageHeight);
   }
 });
 // 모바일화면 사진 교체
-function changeImg(element){
+function changeImg(element) {
   backgroundImage = document.getElementById("background_image");
   // skinImage = document.getElementById("skin_image");
   if (element < 601) {
     backgroundImage.src = "/images/2.treat/P2_1_mobile.jpg";
     // skinImage.src = "/images/2.treat/P8.png";
-  }else{
+  } else {
     backgroundImage.src = "/images/2.treat/P2_1.png";
     // skinImage.src = "/images/2.treat/P8.jpg";
   }
@@ -99,17 +99,26 @@ function adjustClickboxHeight(element) {
 //       // element.classList.remove("fadeReady2");
 //     }
 //   });
+
+// body2 슬라이드 처리
 let underLine = Array.from(document.querySelectorAll(".underLine"));
 
 let slidesContainer = document.getElementById("slideContainer");
 let slide = document.querySelector(".slide");
 let selectedElement = null;
+// 클릭이벤트 진행여부
+let animating = false;
 
 underLine.forEach((element, index) => {
   element.addEventListener("click", function (event) {
+    if (animating) return; // 애니메이션 중인 경우 클릭 이벤트 무시
+    animating = true; //
+
+    let id = event.currentTarget.id;
     let element = event.currentTarget;
     let siblings = element.parentElement.children;
-    let id = event.currentTarget.id;
+    console.log("element.parentElement ", element.parentElement);
+    console.log("siblings ", siblings);
 
     let targetIndex = parseInt(id.replace("line", "")) - 1;
     // 이전 요소의 인덱스 값
@@ -124,15 +133,20 @@ underLine.forEach((element, index) => {
 
     selectedElement = element;
 
+    // 선택요소 확대하기
     for (i = 0; i < siblings.length; i++) {
       if (siblings[i].classList.contains("enlarge")) {
         siblings[i].classList.remove("enlarge");
         siblings[i].firstChild.classList.remove("enlargeLogo");
       }
     }
+    setTimeout(function () {
+      animating = false;
+    }, 500);
+
     element.classList.add("enlarge");
     element.firstChild.classList.add("enlargeLogo");
-  });
+  }); // event 종료
 });
 
 // 메인이미지 clickBox 처리
