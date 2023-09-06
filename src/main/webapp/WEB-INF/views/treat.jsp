@@ -27,15 +27,24 @@
           <img id="background_image" class="background_image" src="/images/2.treat/P2_1.png" alt="main image"
             usemap="#imageMap" />
           <div id="clickBox">
-            <a class="hotspot" data-content="Forehead <span class='fontRed'><span class='logo'>Bonetta</span> Volume</span>"></a>
-            <a class="hotspot" data-content="Forehead <span class='fontRed'><span class='logo'>Bonetta</span> Volume</span>"></a>
-            <a class="hotspot" data-content="Forehead <span class='fontRed'><span class='logo'>Bonetta</span> Volume</span>"></a>
-            <a class="hotspot" data-content="Forehead <span class='fontRed'><span class='logo'>Bonetta</span> Volume</span>"></a>
-            <a class="hotspot" data-content="Forehead <span class='fontRed'><span class='logo'>Bonetta</span> Volume</span>"></a>
-            <a class="hotspot" data-content="Forehead <span class='fontRed'><span class='logo'>Bonetta</span> Volume</span>"></a>
-            <a class="hotspot" data-content="Forehead <span class='fontRed'><span class='logo'>Bonetta</span> Volume</span>"></a>
-            <a class="hotspot" data-content="Forehead <span class='fontRed'><span class='logo'>Bonetta</span> Volume</span>"></a>
-            <a class="hotspot" data-content="Forehead <span class='fontRed'><span class='logo'>Bonetta</span> Volume</span>"></a>
+            <a class="hotspot"
+              data-content="Forehead <span class='fontRed'><span class='logo'>Bonetta</span> Volume</span>"></a>
+            <a class="hotspot"
+              data-content="Forehead <span class='fontRed'><span class='logo'>Bonetta</span> Volume</span>"></a>
+            <a class="hotspot"
+              data-content="Forehead <span class='fontRed'><span class='logo'>Bonetta</span> Volume</span>"></a>
+            <a class="hotspot"
+              data-content="Forehead <span class='fontRed'><span class='logo'>Bonetta</span> Volume</span>"></a>
+            <a class="hotspot"
+              data-content="Forehead <span class='fontRed'><span class='logo'>Bonetta</span> Volume</span>"></a>
+            <a class="hotspot"
+              data-content="Forehead <span class='fontRed'><span class='logo'>Bonetta</span> Volume</span>"></a>
+            <a class="hotspot"
+              data-content="Forehead <span class='fontRed'><span class='logo'>Bonetta</span> Volume</span>"></a>
+            <a class="hotspot"
+              data-content="Forehead <span class='fontRed'><span class='logo'>Bonetta</span> Volume</span>"></a>
+            <a class="hotspot"
+              data-content="Forehead <span class='fontRed'><span class='logo'>Bonetta</span> Volume</span>"></a>
           </div>
           <div class="title">
             <h1><span>
@@ -63,7 +72,8 @@
                   <img src="/images/2.treat/P2_2_2.png" alt="" class="content-image">
                 </div>
                 <div class="scroller">
-                  <svg class="scroller__thumb" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+                  <svg class="scroller__thumb" xmlns="http://www.w3.org/2000/svg" width="100" height="100"
+                    viewBox="0 0 100 100">
                     <polygon points="0 50 37 68 37 32 0 50" style="fill:#fff" />
                     <polygon points="100 50 64 32 64 68 100 50" style="fill:#fff" />
                   </svg>
@@ -77,7 +87,8 @@
                   <img src="/images/2.treat/P2_3_2.png" alt="" class="content-image">
                 </div>
                 <div class="scroller">
-                  <svg class="scroller__thumb" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+                  <svg class="scroller__thumb" xmlns="http://www.w3.org/2000/svg" width="100" height="100"
+                    viewBox="0 0 100 100">
                     <polygon points="0 50 37 68 37 32 0 50" style="fill:#fff" />
                     <polygon points="100 50 64 32 64 68 100 50" style="fill:#fff" />
                   </svg>
@@ -91,7 +102,8 @@
                   <img src="/images/2.treat/P2_4_2.png" alt="" class="content-image">
                 </div>
                 <div class="scroller">
-                  <svg class="scroller__thumb" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+                  <svg class="scroller__thumb" xmlns="http://www.w3.org/2000/svg" width="100" height="100"
+                    viewBox="0 0 100 100">
                     <polygon points="0 50 37 68 37 32 0 50" style="fill:#fff" />
                     <polygon points="100 50 64 32 64 68 100 50" style="fill:#fff" />
                   </svg>
@@ -263,7 +275,7 @@
                     possible. It has high elasticity and lasts up to 24 months.</p>
                 </div>
               </li>
-              </ul>
+            </ul>
           </div>
         </div>
 
@@ -272,20 +284,41 @@
           <p><span class="logo logoSmall">Bonetta</span> was designed for facial treatment and skin restoration
             That provides the highest satisfaction and safety.</p>
           <div class="skinBox">
-            <img src="/images/2.treat/P8.jpg" id="skin_image">
+            <img src="/images/2.treat/P8.png" id="skin_image">
             <div class="noteLeft">
-              <p><span class="fontRed"><span class="logo logoSmall">Bonetta</span> Fine</span><br>
-                Superficial to mid dermis</p>
-              <p><span class="fontRed"><span class="logo logoSmall">Bonetta</span> Deep</span><br>
-                Mid to deep dermis</p>
-              <p><span class="fontRed"><span class="logo logoSmall">Bonetta</span> Volume</span><br>
-                Subcutaneous layer</p>
+              <div class="leftInbox">
+                <p><span class="fontRed"><span class="logo logoSmall">Bonetta</span> Fine</span><br>
+                  Superficial to mid dermis</p>
+                <svg height="75" width="150">
+                  <polyline points="150,0 0,0 0,75 150,75" stroke="rgba(0,0,0,1)" fill="none" stroke-width="2">
+                  <circle x="" y="" ></circle>
+                  <circle ></circle>
+                </svg>
+              </div>
+              <div class="leftInbox">
+                <p><span class="fontRed"><span class="logo logoSmall">Bonetta</span> Deep</span><br>
+                  Mid to deep dermis</p>
+                  <img src="/images/2.treat/skin02.svg">
+              </div>
+              <div class="leftInbox">
+                <p><span class="fontRed"><span class="logo logoSmall">Bonetta</span> Volume</span><br>
+                  Subcutaneous layer</p>
+                  <img src="/images/2.treat/skin02.svg">
+              </div>
             </div>
             <div class="noteRight">
-              <img src="/images/2.treat/skin01.svg">
-              <p>Epidermis</p>
-              <p>Dermis</p>
-              <p>Subcutaneous layer</p>
+              <div class="rightInbox">
+                <img src="/images/2.treat/skin01.svg">
+                <p>Epidermis</p>
+              </div>
+              <div class="rightInbox">
+                <img src="/images/2.treat/skin01.svg">
+                <p>Dermis</p>
+              </div>
+              <div class="rightInbox">
+                <img src="/images/2.treat/skin01.svg">
+                <p>Subcutaneous layer</p>
+              </div>
             </div>
           </div>
         </div>

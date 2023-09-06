@@ -24,6 +24,9 @@ window.addEventListener("resize", function () {
   adjustParentHeight(MainImageHeight);
   adjustClickboxHeight(MainImageHeight);
 
+  //슬라이드 넓이 구하고;
+  //슬라이드컨테이너 넓이 = 슬라이드 넓이 * 슬라이드 갯수;
+
   if (c_width < 601) {
     changeImg(c_width);
     sec1resize(MainImageHeight);
@@ -102,47 +105,60 @@ let underLine = Array.from(document.querySelectorAll(".underLine"));
 
 let slidesContainer = document.getElementById("slideContainer");
 let slide = document.querySelector(".slide");
-let selectedElement = null;
+let selectedElement = 0;
 // 클릭이벤트 진행여부
 let animating = false;
 
+
+
 underLine.forEach((element, index) => {
   element.addEventListener("click", function (event) {
-    if (animating) return; // 애니메이션 중인 경우 클릭 이벤트 무시
-    animating = true; //
-
-    let id = event.currentTarget.id;
-    let element = event.currentTarget;
-    let siblings = element.parentElement.children;
-    console.log("element.parentElement ", element.parentElement);
-    console.log("siblings ", siblings);
-
-    let targetIndex = parseInt(id.replace("line", "")) - 1;
-    // 이전 요소의 인덱스 값
-    let currentIndex = selectedElement ? underLine.indexOf(selectedElement) : 0;
-    console.log("targetIndex 는 ", targetIndex);
-    console.log("currentIndex 는 ", currentIndex);
-
-    // 슬라이드 이동
-    let slideWidth = slide.clientWidth;
-    let moveAmount = (targetIndex - currentIndex) * slideWidth;
-    slidesContainer.scrollLeft += moveAmount;
-
-    selectedElement = element;
-
-    // 선택요소 확대하기
-    for (i = 0; i < siblings.length; i++) {
-      if (siblings[i].classList.contains("enlarge")) {
-        siblings[i].classList.remove("enlarge");
-        siblings[i].firstChild.classList.remove("enlargeLogo");
+    //확대되는 기능
+    element
+    if(element.classList.contains("enlarge")){
+      return false;
+    }else{
+      //언더라인 버튼 애니메이션
+      for(var i;i<children.length;i++){
+        element.parent.children.classList.remove("enlarge");
       }
-    }
-    setTimeout(function () {
-      animating = false;
-    }, 800);
+      element.classList.add("enlarge");
+      //슬라이드 애니메이션
+      var eleIndex = getIndex(element);
+      querySelector(".slideContainer").sytle.left = eleIndex * silde.Width;
 
-    element.classList.add("enlarge");
-    element.firstChild.classList.add("enlargeLogo");
+    }
+    
+    // let id = event.currentTarget.id;
+    // let element = event.currentTarget;
+    // let siblings = element.parentElement.children;
+    // console.log("element.parentElement ", element.parentElement);
+    // console.log("siblings ", siblings);
+
+    // let targetIndex = parseInt(id.replace("line", "")) - 1;
+    // // 이전 요소의 인덱스 값
+    // let currentIndex = getIndex(element);
+    // console.log("targetIndex 는 ", targetIndex);
+    // console.log("currentIndex 는 ", currentIndex);
+
+    // // 슬라이드 이동
+    // let slideWidth = slide.clientWidth;
+    // slidesContainer.style.width = slideWidth*3;
+
+    // slidesContainer.style.left = underLine.indexOf(selectedElement)*slideWidth;
+
+    // selectedElement = element;
+
+    // // 선택요소 확대하기
+    // for (i = 0; i < siblings.length; i++) {
+    //   if (siblings[i].classList.contains("enlarge")) {
+    //     siblings[i].classList.remove("enlarge");
+    //     siblings[i].firstChild.classList.remove("enlargeLogo");
+    //   }
+    // }
+
+    // element.classList.add("enlarge");
+    // element.firstChild.classList.add("enlargeLogo");
   }); // event 종료
 });
 

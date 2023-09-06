@@ -435,7 +435,6 @@ h3 {
   display: grid;
   grid-template-columns: 300px 700px 300px;
   grid-auto-flow: row dense;
-  column-gap: 8px;
 }
 
 .body3>.skinBox>img {
@@ -451,6 +450,9 @@ h3 {
   grid-column: 1/2;
   text-align: right;
   font-size: 1.25rem;
+}
+.body3>.skinBox .noteLeft .leftInbox {
+  display: flex;
 }
 
 .body3>.skinBox .noteLeft .logoSmall {
@@ -472,6 +474,9 @@ h3 {
 .body3>.skinBox .noteRight {
   grid-column: 3/4;
   font-size: 1.25rem;
+}
+.body3>.skinBox .noteLeft .rightInbox {
+  display: flex;
 }
 
 .body3>.skinBox .noteRight p:nth-of-type(1) {
@@ -683,7 +688,6 @@ h3 {
   /* body3 */
   .sec2body.grid_wrapp.body3>.skinBox {
     grid-template-columns: 1fr 330px 1fr;
-    column-gap: 5px;
   }
 
   .body3>.skinBox .noteLeft,
