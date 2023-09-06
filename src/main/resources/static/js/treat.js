@@ -1,36 +1,30 @@
 // 공통변수
 let sec1 = document.getElementById("sec1");
-let backgroundImage;
 let MainImageHeight;
 let c_width;
 
 // onload
 window.onload = function () {
   deviceWidth();
+  changeImg(c_width);
   MainImageHeight = getParentHeight();
   adjustParentHeight(MainImageHeight);
-  adjustClickboxHeight(MainImageHeight);
-  // headerScroll();
-
   if (c_width < 601) {
-    changeImg(c_width);
     sec1resize(MainImageHeight);
   }
+  // headerScroll();
+
 };
 // resize
 window.addEventListener("resize", function () {
   deviceWidth();
+  changeImg(c_width);
   MainImageHeight = getParentHeight();
   adjustParentHeight(MainImageHeight);
-  adjustClickboxHeight(MainImageHeight);
-
-  //슬라이드 넓이 구하고;
-  //슬라이드컨테이너 넓이 = 슬라이드 넓이 * 슬라이드 갯수;
-
   if (c_width < 601) {
-    changeImg(c_width);
     sec1resize(MainImageHeight);
   }
+
 });
 // 모바일화면 사진 교체
 function changeImg(element) {
@@ -45,14 +39,7 @@ function changeImg(element) {
 // window.addEventListener("scroll", headerScroll);
 
 // 모바일 sec1 디자인 변경
-// 테스트중
 function sec1resize(element) {
-  // let header = document.getElementsByClassName("headWrapper")[0];
-  // let headerHeight = window.getComputedStyle(header).height;
-  // let titleHeight = element - headerHeight;
-  // let sec1Part = document.getElementsByClassName("sec1Part")[0];
-  // sec1Part.style.height = (parseInt(titleHeight)) + "px";
-  // console.log("title.style.height : " + sec1Part.style.height);
   sec1.style.height = `${element + 150}px`;
 }
 
@@ -64,15 +51,12 @@ function deviceWidth() {
 function getParentHeight() {
   backgroundImage = document.getElementById("background_image");
   let imageHeight = backgroundImage.height;
-
   return imageHeight;
   // sec1.style.height = `${imageHeight}px`;
 }
 // 부모 요소의 높이 조정
 function adjustParentHeight(element) {
   sec1.style.height = `${element}px`;
-}
-function adjustClickboxHeight(element) {
   let clickBox = document.querySelector("#clickBox");
   clickBox.style.height = `${element}px`;
 }

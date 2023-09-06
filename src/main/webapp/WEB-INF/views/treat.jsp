@@ -289,57 +289,57 @@
               <div class="leftInbox">
                 <p><span class="fontRed"><span class="logo logoSmall">Bonetta</span> Fine</span><br>
                   Superficial to mid dermis</p>
-                <svg class="stickTag">
-                  <polyline points="84,6 1,6 1,49 84,49" stroke="#989898" fill="none" stroke-width="2">
-                  </polyline>
-                  <circle cx="84" cy="6" r="5" stroke="#ffffff" fill="none" stroke-width="2"></circle>
-                  <circle cx="84" cy="49" r="5" stroke="#ffffff" fill="none" stroke-width="2"></circle>
-                </svg>
+                  <svg class="stickTag">
+                    <polyline points="49,6 1,6 1,49 49,49" stroke="#989898" fill="none" stroke-width="1">
+                    </polyline>
+                    <circle cx="54" cy="6" r="5" stroke="#ffffff" fill="none" stroke-width="1"></circle>
+                    <circle cx="54" cy="49" r="5" stroke="#ffffff" fill="none" stroke-width="1"></circle>
+                  </svg>
               </div>
               <div class="leftInbox">
                 <p><span class="fontRed"><span class="logo logoSmall">Bonetta</span> Deep</span><br>
                   Mid to deep dermis</p>
                   <svg class="stickTag">
-                    <polyline points="84,6 1,6 1,49 84,49" stroke="#989898" fill="none" stroke-width="2">
+                    <polyline points="49,6 1,6 1,49 49,49" stroke="#989898" fill="none" stroke-width="1">
                     </polyline>
-                    <circle cx="84" cy="6" r="5" stroke="#ffffff" fill="none" stroke-width="2"></circle>
-                    <circle cx="84" cy="49" r="5" stroke="#ffffff" fill="none" stroke-width="2"></circle>
+                    <circle cx="54" cy="6" r="5" stroke="#ffffff" fill="none" stroke-width="1"></circle>
+                    <circle cx="54" cy="49" r="5" stroke="#ffffff" fill="none" stroke-width="1"></circle>
                   </svg>
               </div>
               <div class="leftInbox">
                 <p><span class="fontRed"><span class="logo logoSmall">Bonetta</span> Volume</span><br>
                   Subcutaneous layer</p>
                   <svg class="stickTag">
-                    <polyline points="84,6 1,6 1,49 84,49" stroke="#989898" fill="none" stroke-width="2">
+                    <polyline points="49,6 1,6 1,49 49,49" stroke="#989898" fill="none" stroke-width="1">
                     </polyline>
-                    <circle cx="84" cy="6" r="5" stroke="#ffffff" fill="none" stroke-width="2"></circle>
-                    <circle cx="84" cy="49" r="5" stroke="#ffffff" fill="none" stroke-width="2"></circle>
+                    <circle cx="54" cy="6" r="5" stroke="#ffffff" fill="none" stroke-width="1"></circle>
+                    <circle cx="54" cy="49" r="5" stroke="#ffffff" fill="none" stroke-width="1"></circle>
                   </svg>
               </div>
             </div>
             <div class="noteRight">
               <div class="rightInbox">
                 <svg class="stickTag">
-                  <polyline points="6,6 89,6 89,49 6,49" stroke="#989898" fill="none" stroke-width="2">
+                  <polyline points="11,6 59,6 59,49 11,49" stroke="#989898" fill="none" stroke-width="1">
                   </polyline>
-                  <circle cx="6" cy="6" r="5" stroke="#ffffff" fill="none" stroke-width="2"></circle>
-                  <circle cx="6" cy="49" r="5" stroke="#ffffff" fill="none" stroke-width="2"></circle>
+                  <circle cx="6" cy="6" r="5" stroke="#ffffff" fill="none" stroke-width="1"></circle>
+                  <circle cx="6" cy="49" r="5" stroke="#ffffff" fill="none" stroke-width="1"></circle>
                 </svg>
                 <p>Epidermis</p>
               </div>
               <div class="rightInbox">
                 <svg class="stickTag">
-                  <polyline points="6,27 89,27" stroke="#989898" fill="none" stroke-width="2">
+                  <polyline points="11,30 59,30" stroke="#989898" fill="none" stroke-width="1">
                   </polyline>
-                  <circle cx="6" cy="27" r="5" stroke="#ffffff" fill="none" stroke-width="2"></circle>
+                  <circle cx="6" cy="30" r="5" stroke="#ffffff" fill="none" stroke-width="1"></circle>
                 </svg>
                 <p>Dermis</p>
               </div>
               <div class="rightInbox">
                 <svg class="stickTag">
-                  <polyline points="6,27 89,27" stroke="#989898" fill="none" stroke-width="2">
+                  <polyline points="11,30 59,30" stroke="#989898" fill="none" stroke-width="1">
                   </polyline>
-                  <circle cx="6" cy="27" r="5" stroke="#ffffff" fill="none" stroke-width="2"></circle>
+                  <circle cx="6" cy="30" r="5" stroke="#ffffff" fill="none" stroke-width="1"></circle>
                 </svg>
                 <p>Subcutaneous layer</p>
               </div>
