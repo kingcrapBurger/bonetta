@@ -32,13 +32,10 @@ window.addEventListener("resize", function () {
 // 모바일화면 사진 교체
 function changeImg(element) {
   backgroundImage = document.getElementById("background_image");
-  // skinImage = document.getElementById("skin_image");
   if (element < 601) {
     backgroundImage.src = "/images/2.treat/P2_1_mobile.jpg";
-    // skinImage.src = "/images/2.treat/P8.png";
   } else {
     backgroundImage.src = "/images/2.treat/P2_1.png";
-    // skinImage.src = "/images/2.treat/P8.jpg";
   }
 }
 //scroll
@@ -142,7 +139,7 @@ underLine.forEach((element, index) => {
     }
     setTimeout(function () {
       animating = false;
-    }, 500);
+    }, 800);
 
     element.classList.add("enlarge");
     element.firstChild.classList.add("enlargeLogo");

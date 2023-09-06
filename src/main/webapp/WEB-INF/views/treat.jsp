@@ -282,6 +282,7 @@
                 Subcutaneous layer</p>
             </div>
             <div class="noteRight">
+              <img src="/images/2.treat/skin01.svg">
               <p>Epidermis</p>
               <p>Dermis</p>
               <p>Subcutaneous layer</p>
