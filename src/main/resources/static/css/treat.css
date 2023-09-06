@@ -325,11 +325,12 @@ h3 {
 }
 
 .sec2body.grid_wrapp.body2 .slideWrapper .slideContainer {
+  position: relative;
   width: 100%;
   list-style: none;
   display: flex;
-  scroll-behavior: smooth;
-  overflow: scroll;
+  overflow: visible;
+  transition: all 2s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 /* 슬라이더 창 스크롤 방지 */
@@ -414,6 +415,7 @@ h3 {
 .sec2body.grid_wrapp.body2>div:nth-child(2) {
   grid-column: 2/span 10;
 }
+
 .sec2body.grid_wrapp.body2>.flexRow {
   height: 180px;
 }
@@ -433,7 +435,7 @@ h3 {
   height: 50vw;
   position: relative;
   display: grid;
-  grid-template-columns: 300px 700px 300px;
+  grid-template-columns: 350px 500px 350px;
   grid-auto-flow: row dense;
 }
 
@@ -448,18 +450,33 @@ h3 {
 
 .body3>.skinBox .noteLeft {
   grid-column: 1/2;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
   text-align: right;
   font-size: 1.25rem;
+  position: relative;
+  top: 184px;
+  left: 81px;
 }
+
 .body3>.skinBox .noteLeft .leftInbox {
   display: flex;
+  align-items: center;
+  justify-content: end;
+  column-gap: 10px;
+}
+
+.body3>.skinBox .stickTag {
+  width: 90px;
+  height: 55px;
 }
 
 .body3>.skinBox .noteLeft .logoSmall {
   font-size: 1.2rem;
 }
 
-.body3>.skinBox .noteLeft p:nth-of-type(1) {
+/* .body3>.skinBox .noteLeft p:nth-of-type(1) {
   top: 243px;
 }
 
@@ -469,17 +486,27 @@ h3 {
 
 .body3>.skinBox .noteLeft p:nth-of-type(3) {
   top: 316px;
-}
+} */
 
 .body3>.skinBox .noteRight {
   grid-column: 3/4;
-  font-size: 1.25rem;
-}
-.body3>.skinBox .noteLeft .rightInbox {
   display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+  text-align: right;
+  font-size: 1.25rem;
+  position: relative;
+  top: 75px;
+  left: -40px;
 }
 
-.body3>.skinBox .noteRight p:nth-of-type(1) {
+.body3>.skinBox .noteRight .rightInbox {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+/* .body3>.skinBox .noteRight p:nth-of-type(1) {
   top: 109px;
 }
 
@@ -489,7 +516,7 @@ h3 {
 
 .body3>.skinBox .noteRight p:nth-of-type(3) {
   top: 316px;
-}
+} */
 
 /* 애니메이션 관련 */
 .title {
@@ -544,9 +571,10 @@ h3 {
     height: 0.9rem;
     padding: 0.2rem;
   }
+
   .sec1 .title {
     grid-column: 2/8;
-}
+  }
 
   /* body3 */
   .sec2body.grid_wrapp.body3>.skinBox {
@@ -609,9 +637,10 @@ h3 {
     width: 0.7rem;
     height: 0.7rem;
   }
+
   #clickBox .hotspot.btnFocus {
-  font-size: 0.9rem;
-}
+    font-size: 0.9rem;
+  }
 
   /* sec2 */
   #sec2 {
@@ -646,6 +675,7 @@ h3 {
   .sec2body.grid_wrapp.body2>div:nth-child(2) {
     grid-column: 1/span 12;
   }
+
   .sec2body.grid_wrapp.body2>.flexRow {
     height: 150px;
   }
@@ -749,6 +779,7 @@ h3 {
     grid-template-columns: repeat(6, 1fr);
     column-gap: 10px;
   }
+
   /* sec1 */
 
   .sec1.grid_wrapp {
@@ -761,54 +792,57 @@ h3 {
     padding-left: 4%;
     align-self: flex-end;
   }
+
   #clickBox .hotspot.btnFocus .logo {
     font-size: 1rem;
   }
+
   #clickBox .hotspot.btnFocus {
     font-size: 0.875rem;
     border-radius: 10px;
     animation-name: btnFocus;
-}
+  }
+
   #clickBox .hotspot:nth-of-type(1) {
     left: 62.6%;
     top: 26%;
   }
-  
+
   #clickBox .hotspot:nth-of-type(2) {
     left: 35%;
     top: 33%;
   }
-  
+
   #clickBox .hotspot:nth-of-type(3) {
     left: 41%;
     top: 40%;
   }
-  
+
   #clickBox .hotspot:nth-of-type(4) {
     left: 56%;
     top: 46%;
   }
-  
+
   #clickBox .hotspot:nth-of-type(5) {
     left: 28%;
     top: 45%;
   }
-  
+
   #clickBox .hotspot:nth-of-type(6) {
     left: 41%;
     top: 51%;
   }
-  
+
   #clickBox .hotspot:nth-of-type(7) {
     left: 35%;
     top: 59%;
   }
-  
+
   #clickBox .hotspot:nth-of-type(8) {
     left: 48%;
     top: 66%;
   }
-  
+
   #clickBox .hotspot:nth-of-type(9) {
     left: 45%;
     top: 71%;
@@ -851,6 +885,7 @@ h3 {
   .sec2body.grid_wrapp.body2>div:nth-child(2) {
     grid-column: 1/span 6;
   }
+
   .sec2body.grid_wrapp.body2>.flexRow {
     height: 100px;
     width: 90%;
@@ -887,7 +922,7 @@ h3 {
   .graphBox>table td {
     padding: 0 6px 0;
   }
-  
+
   .graphBox>table .grayCell {
     border: solid 7px white;
   }
@@ -913,6 +948,7 @@ h3 {
     width: 100%;
     text-align: center;
   }
+
   .sec2body.grid_wrapp.body3>.skinBox {
     grid-column: 1/span 6;
     /* height: 50vw; */
@@ -923,9 +959,10 @@ h3 {
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 5px;
   }
+
   .body3>.skinBox>img {
     /* grid-column: 1/4; */
-}
+  }
 
   .body3>.skinBox .noteLeft,
   .body3>.skinBox .noteRight {

@@ -105,30 +105,30 @@ let underLine = Array.from(document.querySelectorAll(".underLine"));
 
 let slidesContainer = document.getElementById("slideContainer");
 let slide = document.querySelector(".slide");
-let selectedElement = 0;
-// 클릭이벤트 진행여부
-let animating = false;
-
-
 
 underLine.forEach((element, index) => {
   element.addEventListener("click", function (event) {
-    //확대되는 기능
-    element
-    if(element.classList.contains("enlarge")){
+
+    // 언더라인 버튼 애니메이션
+    if (element.classList.contains("enlarge")) {
       return false;
-    }else{
-      //언더라인 버튼 애니메이션
-      for(var i;i<children.length;i++){
-        element.parent.children.classList.remove("enlarge");
+    } else {
+      for (var i=0; i < underLine.length; i++) {
+        underLine[i].classList.remove("enlarge");
       }
       element.classList.add("enlarge");
+      
       //슬라이드 애니메이션
-      var eleIndex = getIndex(element);
-      querySelector(".slideContainer").sytle.left = eleIndex * silde.Width;
+      // var eleIndex = getIndex(element);
+      let slideWidth = slide.clientWidth;
+      console.log("slideWidth : "+ slideWidth);
+      slidesContainer.style.left = ("-" + slideWidth * index) + "px";
+      console.log("slidesContainer.style.left : "+ slidesContainer.style.left);
+
+      // querySelector(".slideContainer").sytle.left = eleIndex * silde.Width;
 
     }
-    
+
     // let id = event.currentTarget.id;
     // let element = event.currentTarget;
     // let siblings = element.parentElement.children;

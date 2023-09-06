@@ -289,34 +289,58 @@
               <div class="leftInbox">
                 <p><span class="fontRed"><span class="logo logoSmall">Bonetta</span> Fine</span><br>
                   Superficial to mid dermis</p>
-                <svg height="75" width="150">
-                  <polyline points="150,0 0,0 0,75 150,75" stroke="rgba(0,0,0,1)" fill="none" stroke-width="2">
-                  <circle x="" y="" ></circle>
-                  <circle ></circle>
+                <svg class="stickTag">
+                  <polyline points="84,6 1,6 1,49 84,49" stroke="#989898" fill="none" stroke-width="2">
+                  </polyline>
+                  <circle cx="84" cy="6" r="5" stroke="#ffffff" fill="none" stroke-width="2"></circle>
+                  <circle cx="84" cy="49" r="5" stroke="#ffffff" fill="none" stroke-width="2"></circle>
                 </svg>
               </div>
               <div class="leftInbox">
                 <p><span class="fontRed"><span class="logo logoSmall">Bonetta</span> Deep</span><br>
                   Mid to deep dermis</p>
-                  <img src="/images/2.treat/skin02.svg">
+                  <svg class="stickTag">
+                    <polyline points="84,6 1,6 1,49 84,49" stroke="#989898" fill="none" stroke-width="2">
+                    </polyline>
+                    <circle cx="84" cy="6" r="5" stroke="#ffffff" fill="none" stroke-width="2"></circle>
+                    <circle cx="84" cy="49" r="5" stroke="#ffffff" fill="none" stroke-width="2"></circle>
+                  </svg>
               </div>
               <div class="leftInbox">
                 <p><span class="fontRed"><span class="logo logoSmall">Bonetta</span> Volume</span><br>
                   Subcutaneous layer</p>
-                  <img src="/images/2.treat/skin02.svg">
+                  <svg class="stickTag">
+                    <polyline points="84,6 1,6 1,49 84,49" stroke="#989898" fill="none" stroke-width="2">
+                    </polyline>
+                    <circle cx="84" cy="6" r="5" stroke="#ffffff" fill="none" stroke-width="2"></circle>
+                    <circle cx="84" cy="49" r="5" stroke="#ffffff" fill="none" stroke-width="2"></circle>
+                  </svg>
               </div>
             </div>
             <div class="noteRight">
               <div class="rightInbox">
-                <img src="/images/2.treat/skin01.svg">
+                <svg class="stickTag">
+                  <polyline points="6,6 89,6 89,49 6,49" stroke="#989898" fill="none" stroke-width="2">
+                  </polyline>
+                  <circle cx="6" cy="6" r="5" stroke="#ffffff" fill="none" stroke-width="2"></circle>
+                  <circle cx="6" cy="49" r="5" stroke="#ffffff" fill="none" stroke-width="2"></circle>
+                </svg>
                 <p>Epidermis</p>
               </div>
               <div class="rightInbox">
-                <img src="/images/2.treat/skin01.svg">
+                <svg class="stickTag">
+                  <polyline points="6,27 89,27" stroke="#989898" fill="none" stroke-width="2">
+                  </polyline>
+                  <circle cx="6" cy="27" r="5" stroke="#ffffff" fill="none" stroke-width="2"></circle>
+                </svg>
                 <p>Dermis</p>
               </div>
               <div class="rightInbox">
-                <img src="/images/2.treat/skin01.svg">
+                <svg class="stickTag">
+                  <polyline points="6,27 89,27" stroke="#989898" fill="none" stroke-width="2">
+                  </polyline>
+                  <circle cx="6" cy="27" r="5" stroke="#ffffff" fill="none" stroke-width="2"></circle>
+                </svg>
                 <p>Subcutaneous layer</p>
               </div>
             </div>
