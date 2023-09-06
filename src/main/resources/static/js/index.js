@@ -38,7 +38,7 @@ function sec1resize(element) {
   // let sec1Part = document.getElementsByClassName("sec1Part")[0];
   // sec1Part.style.height = (parseInt(titleHeight)) + "px";
   // console.log("title.style.height : " + sec1Part.style.height);
-  sec1.style.height = `${element + 200}px`;
+  sec1.style.height = `${element + 150}px`;
 }
 
 // 디바이스 크기 구하기

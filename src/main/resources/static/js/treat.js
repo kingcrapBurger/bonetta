@@ -13,6 +13,7 @@ window.onload = function () {
   // headerScroll();
 
   if (c_width < 601) {
+    changeImg(c_width);
     sec1resize(MainImageHeight);
   }
 };
@@ -22,11 +23,24 @@ window.addEventListener("resize", function () {
   MainImageHeight = getParentHeight();
   adjustParentHeight(MainImageHeight);
   adjustClickboxHeight(MainImageHeight);
-
+  
   if (c_width < 601) {
+    changeImg(c_width);
     sec1resize(MainImageHeight);
   }
 });
+// 모바일화면 사진 교체
+function changeImg(element){
+  backgroundImage = document.getElementById("background_image");
+  // skinImage = document.getElementById("skin_image");
+  if (element < 601) {
+    backgroundImage.src = "/images/2.treat/P2_1_mobile.jpg";
+    // skinImage.src = "/images/2.treat/P8.png";
+  }else{
+    backgroundImage.src = "/images/2.treat/P2_1.png";
+    // skinImage.src = "/images/2.treat/P8.jpg";
+  }
+}
 //scroll
 // window.addEventListener("scroll", headerScroll);
 
@@ -39,7 +53,7 @@ function sec1resize(element) {
   // let sec1Part = document.getElementsByClassName("sec1Part")[0];
   // sec1Part.style.height = (parseInt(titleHeight)) + "px";
   // console.log("title.style.height : " + sec1Part.style.height);
-  sec1.style.height = `${element + 200}px`;
+  sec1.style.height = `${element + 150}px`;
 }
 
 // 디바이스 너비 구하기

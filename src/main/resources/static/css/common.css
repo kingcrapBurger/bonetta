@@ -156,6 +156,7 @@ a{
 .subtitleBox:nth-child(1){
   margin: 25% 0 5%;
   position: relative;
+  z-index: 101;
 }
 .subtitleBox>img{
   position:absolute;
