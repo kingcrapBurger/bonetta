@@ -252,6 +252,7 @@ h3 {
   justify-content: center;
   box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.5);
   width: 80%;
+  max-width: 550px;
   /* width: 150px;
   height: 250px;
   border-radius: 12px;
@@ -263,7 +264,7 @@ h3 {
 .carousel>.carousel__list .carousel__item[data-pos="-1"] {
   z-index: 1;
   opacity: 0.7;
-  transform: translateX(-20%) scale(0.8);
+  transform: translate3d(-30%, 0, -100px);
   cursor: pointer;
 }
 
@@ -274,18 +275,83 @@ h3 {
 .carousel>.carousel__list .carousel__item[data-pos="1"] {
   z-index: 1;
   opacity: 0.7;
-  transform: translateX(20%) scale(0.8);
+  transform: translate3d(30%, 0, -100px);
   cursor: pointer;
 }
 
 .before,
 .after {
-  /* position: absolute; */
+  position: absolute;
+  line-height: 0;
+  width: fit-content;
+  height: auto;
   top: 0;
   left: 0;
   pointer-events: none;
   overflow: hidden;
 }
+
+/* 스크롤 관련 start */
+/* .scroller {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 100px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background-color: transparent;
+  opacity: 0.9;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.scroller:hover {
+  opacity: 1;
+}
+
+.scrolling {
+  pointer-events: none;
+  opacity: 1;
+  z-index: 1;
+}
+
+.scroller__thumb {
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+}
+
+.scroller:before,
+.scroller:after {
+  content: " ";
+  display: block;
+  width: 7px;
+  height: 9999px;
+  position: absolute;
+  left: 50%;
+  margin-left: -3.5px;
+  z-index: 30;
+  transition: 0.1s;
+}
+
+.scroller:before {
+  top: 100%;
+}
+
+.scroller:after {
+  bottom: 100%;
+}
+
+.scroller {
+  border: 5px solid #fff;
+}
+
+.scroller:before,
+.scroller:after {
+  background: #fff;
+} */
+/* 스크롤 end */
 
 .sec2body.body1>div:nth-child(3) {
   width: 60%;
@@ -991,6 +1057,7 @@ h3 {
   .body3>.skinBox p {
     line-height: 1;
   }
+
   .body3>.skinBox .stickTag {
     display: none;
   }

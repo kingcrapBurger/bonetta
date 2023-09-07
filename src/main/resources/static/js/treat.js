@@ -84,9 +84,9 @@ underLine.forEach((element, index) => {
       //슬라이드 애니메이션
       // var eleIndex = getIndex(element);
       let slideWidth = slide.clientWidth;
-      console.log("slideWidth : " + slideWidth);
       slidesContainer.style.left = ("-" + slideWidth * index) + "px";
-      console.log("slidesContainer.style.left : " + slidesContainer.style.left);
+      // console.log("slideWidth : " + slideWidth);
+      // console.log("slidesContainer.style.left : " + slidesContainer.style.left);
 
       // querySelector(".slideContainer").sytle.left = eleIndex * silde.Width;
 
@@ -162,14 +162,14 @@ let elems = Array.from(carouselItems);
 // });
 elems.forEach(element =>{
   element.addEventListener("click", function(event){
-    console.log("event.target : ",this);
+    // console.log("event.target : ",this);
     update(this)
   });
 });
 
 let update = function (newActive) {
   let newItemPos = newActive.dataset.pos;
-  console.log("newItemPos :", newItemPos);
+  // console.log("newItemPos :", newItemPos);
 
   let current = elems.find((elem) => elem.dataset.pos == 0);
   let prev = elems.find((elem) => elem.dataset.pos == -1);
@@ -184,7 +184,7 @@ let update = function (newActive) {
 
 let getPos = function (current, selected) {
   let diff = current - selected;
-  console.log("diff :", diff);
+  // console.log("diff :", diff);
 
   if (Math.abs(current - selected) > 1) {
     return -current;
@@ -192,6 +192,16 @@ let getPos = function (current, selected) {
 
   return diff;
 };  // // carousel 이벤트 end
+let beforeHeight;
+//  let carouselItem = Array.from(document.querySelectorAll(".carousel__item"));
+ carouselItems.forEach(element =>{
+  beforeHeight = element.firstElementChild.clientHeight;
+  element.style.height = beforeHeight+"px";
+ });
+ carouselList.style.height = beforeHeight+"px";
+
+//  comparison slider
+
 
 
 
