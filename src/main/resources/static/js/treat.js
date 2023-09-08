@@ -150,16 +150,156 @@ function smallBtn(element) {
 }
 
 
-// carousel 이벤트
+//  comparison slider
+
+// let scrollers = document.querySelectorAll(".scroller")
+// for(var i=0;i<scrollers.length;i++){
+//   scrollers[i].addEventListener("mousedown",function(){
+//     active = true;
+//     this.classList.add("scrolling");
+//     eventTarget = this;
+//     console.log("down works")
+//   });
+// }
+
+let active = false;
+var eventTarget;
+
+// drag on
+let scroller = Array.from(document.querySelectorAll(".scroller"));
+scroller.forEach((element) => {
+  // element.addEventListener("mousedown", function (event) {
+  //   console.log("mousedown works");
+  //   let parentElm = event.target.parentElement;
+  //   console.log("parentElm : ", parentElm);
+  //   console.log("dataset값은 ", parentElm.dataset.pos);
+  //   if (parentElm.dataset.pos = "0") {
+  //     active = true;
+  //     event.target.classList.add("scrolling");
+  //     eventTarget = event.target;
+  //     console.log("eventTarget : ", eventTarget);
+  //   }
+  // });
+  // element.addEventListener("mousedown", function () {
+  //   console.log("mousedown works");
+  //   let parentElm = this.parentElement;
+  //   console.log("parentElm : ", parentElm);
+  //   console.log("dataset값은 ", parentElm.dataset.pos);
+  //   if (parentElm.dataset.pos == 0) {
+  //     active = true;
+  //     this.classList.add("scrolling");
+  //     eventTarget = this;
+  //     console.log("eventTarget : ", eventTarget);
+  //   }
+  // });
+  // element.addEventListener("touchstart", function () {
+  //   console.log("touchstart works");
+  //   let parentElm = this.parentElement;
+  //   console.log("parentElm : ", parentElm);
+  //   console.log("dataset값은 ", parentElm.dataset.pos);
+  //   if (parentElm.dataset.pos == 0) {
+  //     active = true;
+  //     this.classList.add("scrolling");
+  //     eventTarget = this;
+  //     console.log("eventTarget : ", eventTarget);
+  //   }
+  // });
+  
+
+  // comparison slider start
+  element.addEventListener("mousedown", startComparisonSlider);
+  element.addEventListener("touchstart", startComparisonSlider);
+});
+
+
+function startComparisonSlider(event){
+  console.log("mousedown works");
+  let parentElm = this.parentElement;
+  console.log("parentElm : ", parentElm);
+  console.log("dataset값은 ", parentElm.dataset.pos);
+  if (parentElm.dataset.pos == 0) {
+    active = true;
+    this.classList.add("scrolling");
+    eventTarget = this;
+    console.log("eventTarget : ", eventTarget);
+  }
+}
+
+
+// drag and move
+document.body.addEventListener('mousemove', function (e) {
+  console.log("mousemove work");
+  if (!active) return;
+  let x = e.pageX;
+  
+  x -= eventTarget.parentNode.getBoundingClientRect().left;
+  scrollIt(x);
+});
+
+document.body.addEventListener('touchmove', function (e) {
+  console.log("touchmove work");
+  console.log("e :", e);
+  if (!active) return;
+  // let x = e.pageX;
+  let x = e.changedTouches[0].pageX;
+  console.log("mobile touch coordination: ", x);
+
+  x -= eventTarget.parentNode.getBoundingClientRect().left;
+  scrollIt(x);
+});
+
+function scrollIt(x) {
+  let transform = Math.max(0, (Math.min(x, eventTarget.parentNode.offsetWidth)));
+  eventTarget.parentNode.children[1].style.width = transform + "px";
+  eventTarget.style.left = transform - 25 + "px";
+}
+
+
+// comparison slider end
+document.body.addEventListener("mouseup", endComparisonSlider);
+document.body.addEventListener("mouseleave", endComparisonSlider);
+document.body.addEventListener("touchend", endComparisonSlider);
+document.body.addEventListener("touchcancel", endComparisonSlider);
+
+function endComparisonSlider(){
+  active = false;
+  eventTarget.classList.remove('scrolling');
+  console.log("endComparisonSlider work");
+}
+
+
+
+
+// drag off
+// document.body.addEventListener('mouseup', function () {
+//   active = false;
+//   eventTarget.classList.remove('scrolling');
+//   console.log("mouseup work");
+// });
+// document.body.addEventListener('mouseleave', function () {
+//   active = false;
+//   eventTarget.classList.remove('scrolling');
+//   console.log("mouseleave work");
+// });
+// document.body.addEventListener('touchend',function(){
+//   active = false;
+//   eventTarget.classList.remove('scrolling');
+//   console.log("touchend work");
+// });
+// document.body.addEventListener('touchcancel',function(){
+//   active = false;
+//   eventTarget.classList.remove('scrolling');
+//   console.log("touchcancel work");
+// });
+
+
+
+
+// carousel 이벤트 start
 let carouselList = document.querySelector(".carousel__list");
 let carouselItems = document.querySelectorAll(".carousel__item");
 let elems = Array.from(carouselItems);
 
-// carouselList.addEventListener("click", function (event) {
-//   var newActive = event.target.closest(".carousel__item");
-//   console.log(newActive);
-//   update(newActive);
-// });
 elems.forEach(element => {
   element.addEventListener("click", function (event) {
     // console.log("event.target : ",this);
@@ -191,7 +331,10 @@ let getPos = function (current, selected) {
   }
 
   return diff;
-};  // // carousel 이벤트 end
+};  // carousel 이벤트 end
+
+
+// 부모 carousel height 자식에 맞추기
 // let beforeHeight;
 //  let carouselItem = Array.from(document.querySelectorAll(".carousel__item"));
 // carouselItems.forEach(element => {
@@ -200,61 +343,14 @@ let getPos = function (current, selected) {
 // });
 // carouselList.style.height = beforeHeight + "px";
 
-//  comparison slider
 
 
 
 
 
-let active = false;
-var eventTarget;
-
-// let scrollers = document.querySelectorAll(".scroller")
-// for(var i=0;i<scrollers.length;i++){
-//   scrollers[i].addEventListener("mousedown",function(){
-//     active = true;
-//     this.classList.add("scrolling");
-//     eventTarget = this;
-//     console.log("down works")
-//   });
-// }
-let scroller = Array.from(document.querySelectorAll(".scroller"));
-scroller.forEach((element) => {
-  element.addEventListener("mousedown", function () {
-    active = true;
-    this.classList.add("scrolling");
-    eventTarget = this;
-    console.log("down works")
-    console.log("eventTarget : ",eventTarget);
-  });
-});
 
 
 
-document.body.addEventListener('mousemove', function (e) {
-  if (!active) return;
-  let x = e.pageX;
 
-  x -= eventTarget.parentNode.getBoundingClientRect().left;
-  scrollIt(x);
-});
-
-
-function scrollIt(x) {
-  let transform = Math.max(0, (Math.min(x, eventTarget.parentNode.offsetWidth)));
-  eventTarget.parentNode.children[1].style.width = transform + "px";
-  eventTarget.style.left = transform - 25 + "px";
-}
-
-document.body.addEventListener('mouseup', function () {
-  active = false;
-  eventTarget.classList.remove('scrolling');
-  console.log("up work");
-});
-document.body.addEventListener('mouseleave', function () {
-  active = false;
-  eventTarget.classList.remove('scrolling');
-  console.log("leave work");
-});
 
 
