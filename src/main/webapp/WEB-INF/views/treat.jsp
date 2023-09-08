@@ -71,7 +71,7 @@
                 <div class="after">
                   <img src="/images/2.treat/P2_2_2.png" alt="" class="content-image">
                 </div>
-                <div class="scroller">
+                <div class="scroller" draggable="false">
                   <svg class="scroller__thumb" xmlns="http://www.w3.org/2000/svg" width="100" height="100"
                     viewBox="0 0 100 100">
                     <polygon points="0 50 37 68 37 32 0 50" style="fill:#fff" />
@@ -86,7 +86,7 @@
                 <div class="after">
                   <img src="/images/2.treat/P2_3_2.png" alt="" class="content-image">
                 </div>
-                <div class="scroller">
+                <div class="scroller" draggable="false">
                   <svg class="scroller__thumb" xmlns="http://www.w3.org/2000/svg" width="100" height="100"
                     viewBox="0 0 100 100">
                     <polygon points="0 50 37 68 37 32 0 50" style="fill:#fff" />
@@ -101,7 +101,7 @@
                 <div class="after">
                   <img src="/images/2.treat/P2_4_2.png" alt="" class="content-image">
                 </div>
-                <div class="scroller">
+                <div class="scroller" draggable="false">
                   <svg class="scroller__thumb" xmlns="http://www.w3.org/2000/svg" width="100" height="100"
                     viewBox="0 0 100 100">
                     <polygon points="0 50 37 68 37 32 0 50" style="fill:#fff" />

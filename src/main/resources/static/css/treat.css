@@ -244,6 +244,9 @@ h3 {
   max-height: 350px;
   justify-content: center;
   perspective: 300px;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  perspective-origin: 50% 50%;
 }
 
 .carousel>.carousel__list .carousel__item {
@@ -252,9 +255,9 @@ h3 {
   justify-content: center;
   box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.5);
   width: 80%;
-  max-width: 550px;
+  max-width: 500px;
+  height: 300px;
   /* width: 150px;
-  height: 250px;
   border-radius: 12px;
   box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.5); */
   position: absolute;
@@ -262,24 +265,22 @@ h3 {
 }
 
 .carousel>.carousel__list .carousel__item[data-pos="-1"] {
-  z-index: 1;
   opacity: 0.7;
   transform: translate3d(-30%, 0, -100px);
   cursor: pointer;
 }
 
 .carousel>.carousel__list .carousel__item[data-pos="0"] {
-  z-index: 2;
+
 }
 
 .carousel>.carousel__list .carousel__item[data-pos="1"] {
-  z-index: 1;
   opacity: 0.7;
   transform: translate3d(30%, 0, -100px);
   cursor: pointer;
 }
 
-.before,
+/* .before,
 .after {
   position: absolute;
   line-height: 0;
@@ -289,11 +290,47 @@ h3 {
   left: 0;
   pointer-events: none;
   overflow: hidden;
+} */
+
+/* carousel 이벤트 시작 */
+/* Our image information */
+.before,
+.after {
+  /* width:100%;
+  height:100%;
+  background-repeat:no-repeat;
+  background-color: white;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top:0;
+  left:0;
+  pointer-events:none;
+  overflow: hidden; */
+  width:100%;
+  height:100%;
+  background-repeat:no-repeat;
+  background-color: white;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  line-height: 0;
+  top:0;
+  left:0;
+  pointer-events:none;
+  overflow: hidden;
+}
+.before img,
+.after img{
+  max-width: max-content;
 }
 
-/* 스크롤 관련 start */
+.content-image{
+  height:100%;
+}
+
 .after{
-  /* width:125px; */
+  width:125px;
 }
 
 .scroller{
@@ -317,7 +354,6 @@ h3 {
 .scrolling{
   pointer-events:none;
   opacity:1;
-  z-index: 1;
 }
 
 .scroller__thumb{
@@ -331,11 +367,10 @@ h3 {
   content:" ";
   display: block;
   width: 7px;
-  height: calc(315px/2);
+  height: 9999px;
   position: absolute;
   left: 50%;
   margin-left: -3.5px;
-  z-index: 30;
   transition:0.1s;
 }
 .scroller:before{
@@ -345,6 +380,7 @@ h3 {
   bottom:100%;
 }
 
+/* If you want to cahnge the colors, make sure you change the fill in the svgs to match */
 .scroller{
   border: 5px solid #fff;
 }
@@ -353,7 +389,8 @@ h3 {
   background: #fff;
 }
 
-/* 스크롤 end */
+/* carousel 끝 */
+
 
 .sec2body.body1>div:nth-child(3) {
   width: 60%;
@@ -644,6 +681,12 @@ h3 {
   .sec1 .title {
     grid-column: 2/8;
   }
+  /* sec2 */
+
+  /* body1 */
+  .carousel>.carousel__list {
+    height: 310px;
+}
 
   /* body3 */
   .sec2body.grid_wrapp.body3>.skinBox {
@@ -750,6 +793,13 @@ h3 {
   .sec2body.body1>div:nth-child(3) {
     width: 80%;
   }
+  .carousel>.carousel__list {
+    height: 250px;
+}
+.carousel>.carousel__list .carousel__item {
+  max-width: 420px;
+  height: 242px;
+}
 
   /* body2 */
   .sec2body.grid_wrapp.body2>div:nth-child(1),
@@ -960,7 +1010,7 @@ h3 {
   }
 
   .carousel>.carousel__list {
-    height: 30vw;
+    height: 40vw;
   }
 
   .sec2body.body1>div:nth-child(3) {
@@ -1059,9 +1109,15 @@ h3 {
   .body3>.skinBox p {
     line-height: 1;
   }
-
   .body3>.skinBox .stickTag {
     display: none;
+  }
+
+
+  .carousel>.carousel__list .carousel__item {
+  
+    height: 44vw;
+  
   }
 
   /* .body3>.skinBox .noteLeft p:nth-of-type(1) {
