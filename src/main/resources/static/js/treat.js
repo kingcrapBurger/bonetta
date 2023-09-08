@@ -74,7 +74,7 @@ underLine.forEach((element, index) => {
 
     // 언더라인 버튼 애니메이션
     if (element.classList.contains("enlarge")) {
-      return false;
+      event.preventDefault();
     } else {
       for (var i = 0; i < underLine.length; i++) {
         underLine[i].classList.remove("enlarge");
@@ -228,7 +228,6 @@ function startComparisonSlider(event){
 
 // drag and move
 document.body.addEventListener('mousemove', function (e) {
-  console.log("mousemove work");
   if (!active) return;
   let x = e.pageX;
   
@@ -237,10 +236,7 @@ document.body.addEventListener('mousemove', function (e) {
 });
 
 document.body.addEventListener('touchmove', function (e) {
-  console.log("touchmove work");
-  console.log("e :", e);
   if (!active) return;
-  // let x = e.pageX;
   let x = e.changedTouches[0].pageX;
   console.log("mobile touch coordination: ", x);
 

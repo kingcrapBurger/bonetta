@@ -15,7 +15,7 @@
 .headWrapper .home {
   display: inline-block;
   color: #ffffff;
-  font-size: 50px;
+  font-size: 40px;
 }
 
 .navi {
@@ -29,7 +29,7 @@
 }
 
 .navi>li>a {
-  font-size: 20px;
+  font-size: 18px;
   color: #ffffff;
   text-shadow: 0 3px 6px rgba(0, 0, 0, 0.35);
 }
@@ -52,9 +52,10 @@
   .headWrapper .navi {
     column-gap: 25px;
   }
+
   .navi>li>a {
-    font-size: 16px;
-}
+    font-size: 15px;
+  }
 
 }
 
@@ -72,8 +73,9 @@
   .headWrapper .navi {
     column-gap: 5px;
   }
+
   .navi>li>a {
-    font-size: 0.7rem;
-}
+    font-size: 13px;
+  }
 
 }

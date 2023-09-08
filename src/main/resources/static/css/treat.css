@@ -496,6 +496,7 @@ h3 {
 
 .graphBox>img {
   grid-column: 1/span 2;
+  max-height: 500px;
 }
 
 .graphBox>table {
@@ -829,6 +830,9 @@ h3 {
 
   .sec2body.grid_wrapp.body2 .slideWrapper .slide div:nth-of-type(2) p {
     width: 80%;
+  }
+  .graphBox>img {
+    max-height: 400px;
   }
 
   /* onclick 이벤트 */
