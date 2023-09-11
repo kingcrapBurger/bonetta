@@ -15,6 +15,7 @@ window.onload = function () {
     console.log("sec1resize 실행");
     // sec1resize();
   }
+  // hotspotAnime();
 };
 
 // resize 실행시

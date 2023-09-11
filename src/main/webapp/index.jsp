@@ -53,13 +53,13 @@
               <h3 class="subtit txt-right fadeReady2">technology</h3>
             </div>
             <div class="leftPadding">
-              <p class="txt-right">
+              <p class="txt-right bigText">
                 The self-developed HENM Cross Link Technology is a
                 state-of-the-art technology that allows hyaluronic acid to be
                 highly viscous without adding BDDE, one of the filler&#39;s toxic
                 substances.
               </p><br>
-              <p class="txt-right">
+              <p class="txt-right bigText">
                 Using HENM technology, Bonetta has significantly reduced
                 product stability and side effects by completely removing
                 metal ions and impurities that can be mixed into the filler
@@ -77,7 +77,7 @@
               <h3 class="subtit txt-left fadeReady2">Process Technology</h3>
             </div>
             <div class="rightPadding">
-              <p class="txt-left">
+              <p class="txt-left bigText">
                 The production safety of the product has been enhanced through
                 advanced process technology in stage 8. In particular, it
                 minimizes impurities and endotoxins with &#39;de-ionization
@@ -109,7 +109,7 @@
               <h3 class="subtit txt-right fadeReady2">Global product</h3>
             </div>
             <div class="leftPadding">
-              <p class="txt-right">
+              <p class="txt-right bigText">
                 Bonetta averaged 20% higher HA content than other products and
                 23.3% more robust liquidity and retention of famous filler
                 products overseas. HENM bridge technology is proof that it is
@@ -127,7 +127,7 @@
               <h3 class="subtit margin-left txt-left fadeReady2">Stable and constant</h3>
             </div>
             <div class="rightPadding">
-              <p class="txt-left">
+              <p class="txt-left bigText">
                 The jagged injection pressure interferes with the procedure’s
                 delicate techniques and causes pain. Bonetta is a high-purity
                 and sophisticated bridge technology, showing stable and
@@ -151,7 +151,7 @@
         <div class="sec3ContentBox">
           <h3 class="subtit">Minimize BDDE residue</h3>
           <br>
-          <p>
+          <p class="bigText">
             BDDE ( Butane Diol Diglycidyl Ether ) is a cross-linking agent
             used to cross-link hyaluronic acid. It is one of the components of
             HA fillers that provide elasticity by connecting the molecular
@@ -162,7 +162,7 @@
             during filler treatment.
           </p>
           <br>
-          <p>
+          <p class="bigText">
             Bonetta uses HENM technology, a proprietary technology, to
             minimize BDDE to increase the purity of the HA filler
             Significantly reduced the inflammatory response.

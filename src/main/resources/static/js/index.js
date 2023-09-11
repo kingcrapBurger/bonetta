@@ -75,7 +75,7 @@ function headerScroll() {
     let location = lect.bottom;
     // console.log("location :" + location);
     // console.log("winBottom :" + winBottom);
-    if (c_height > location) {
+    if (c_height > location - 40) {
       element.classList.add("scaling");
       for (i = 0; i < childrenNodes.length; i++) {
         let child = childrenNodes[i];
