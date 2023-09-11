@@ -70,10 +70,16 @@ h3 {
 }
 
 .background_image {
+  background-image: url("/images/2.treat/P2_1.png");
+  background-size: cover;
   position: absolute;
   width: 100%;
-  height: auto;
+  height: 59vw;
   z-index: 100;
+}
+
+.sec1 {
+  height: 59vw;
 }
 
 .sec1 .title {
@@ -101,8 +107,20 @@ h3 {
 #clickBox {
   position: absolute;
   width: 100%;
+  height: 59vw;
   grid-column: 1/span 12;
   z-index: 101;
+  animation: dotPoint 2s ease-in-out;
+}
+
+@keyframes dotPoint {
+  from {
+    opacity: 0.2;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 #clickBox .hotspot.btnFocus .logo {
@@ -214,16 +232,18 @@ h3 {
 .sec2body.grid_wrapp {
   place-content: center;
   place-items: center;
-  row-gap: 3rem;
+  row-gap: 2rem;
 }
 
 .sec2body.body1>.flexRow {
-  width: 50%;
+  width: 60%;
+  max-width: 600px;
   justify-content: space-between;
 }
 
 .sec2body.body1>.flexRow h4 {
   font-size: 1.8rem;
+  font-family: 'Castoro Titling', cursive;
 }
 
 .sec2body.body1>.carousel {
@@ -240,8 +260,8 @@ h3 {
   list-style: none;
   position: relative;
   width: 100%;
-  height: 20vw;
-  max-height: 350px;
+  height: 345px;
+  max-height: 345px;
   justify-content: center;
   perspective: 300px;
   transform-style: preserve-3d;
@@ -255,8 +275,8 @@ h3 {
   justify-content: center;
   box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.5);
   width: 80%;
-  max-width: 500px;
-  height: 300px;
+  max-width: 600px;
+  height: 345px;
   /* width: 150px;
   border-radius: 12px;
   box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.5); */
@@ -266,17 +286,13 @@ h3 {
 
 .carousel>.carousel__list .carousel__item[data-pos="-1"] {
   opacity: 0.7;
-  transform: translate3d(-30%, 0, -100px);
+  transform: translate3d(-40%, 0, -100px);
   cursor: pointer;
-}
-
-.carousel>.carousel__list .carousel__item[data-pos="0"] {
-
 }
 
 .carousel>.carousel__list .carousel__item[data-pos="1"] {
   opacity: 0.7;
-  transform: translate3d(30%, 0, -100px);
+  transform: translate3d(40%, 0, -100px);
   cursor: pointer;
 }
 
@@ -307,70 +323,65 @@ h3 {
   left:0;
   pointer-events:none;
   overflow: hidden; */
-  width:100%;
-  height:100%;
-  background-repeat:no-repeat;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
   background-color: white;
   background-size: cover;
   background-position: center;
   position: absolute;
   line-height: 0;
-  top:0;
-  left:0;
-  pointer-events:none;
+  top: 0;
+  left: 0;
+  pointer-events: none;
   overflow: hidden;
 }
+
 .before img,
-.after img{
+.after img {
   max-width: max-content;
 }
 
-.content-image{
-  height:100%;
+.content-image {
+  height: 100%;
 }
 
-.after{
-  width:125px;
+.after {
+  width: 50%;
 }
 
-.scroller{
+.scroller {
   width: 50px;
-  height:50px;
+  height: 50px;
   position: absolute;
-  left:100px;
-  top:50%;
-  transform:translateY(-50%);
-  border-radius:50%;
+  left: calc(50% - 25px);
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
   background-color: transparent;
-  opacity:0.9;
-  pointer-events:auto;
+  opacity: 0.9;
+  pointer-events: auto;
   cursor: pointer;
 }
-.scroller{
-  /* border: 5px solid #fff; */
-}
-.scroller:before,
-.scroller:after{
-  /* background: #fff; */
-}
-.scrollerLine{
+
+.scrollerLine {
   background-color: #fff;
-  width: 3px;
-  height: 300px;
-  opacity:0.8;
+  width: 5px;
+  height: 345px;
+  opacity: 0.8;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.scroller:hover{
-  opacity:1;
+.scroller:hover {
+  opacity: 1;
 }
 
-.scrolling{
-  pointer-events:none;
-  opacity:1;
+.scrolling {
+  pointer-events: none;
+  opacity: 1;
 }
 
 /* .scroller__thumb{
@@ -690,12 +701,13 @@ h3 {
   .sec1 .title {
     grid-column: 2/8;
   }
+
   /* sec2 */
 
   /* body1 */
   .carousel>.carousel__list {
-    height: 310px;
-}
+    height: 345px;
+  }
 
   /* body3 */
   .sec2body.grid_wrapp.body3>.skinBox {
@@ -795,6 +807,10 @@ h3 {
     grid-column: 1/span 12;
   }
 
+  .sec2body.body1>.flexRow {
+    max-width: 409px;
+  }
+
   .sec2body.body1>.flexRow h4 {
     font-size: 1.4rem;
   }
@@ -802,16 +818,19 @@ h3 {
   .sec2body.body1>div:nth-child(3) {
     width: 80%;
   }
+
   .carousel>.carousel__list {
-    height: 250px;
-}
-.carousel>.carousel__list .carousel__item {
-  max-width: 420px;
-  height: 242px;
-}
-.scrollerLine{
-  height: 242px;
-}
+    height: 35vw;
+  }
+
+  .carousel>.carousel__list .carousel__item {
+    width: 64%;
+    height: 35vw;
+  }
+
+  .scrollerLine {
+    height: 35vw;
+  }
 
   /* body2 */
   .sec2body.grid_wrapp.body2>div:nth-child(1),
@@ -831,6 +850,7 @@ h3 {
   .sec2body.grid_wrapp.body2 .slideWrapper .slide div:nth-of-type(2) p {
     width: 80%;
   }
+
   .graphBox>img {
     max-height: 400px;
   }
@@ -934,8 +954,22 @@ h3 {
 
   /* sec1 */
 
+  .sec1 {
+    height: calc(120vw + 150px);
+  }
+
   .sec1.grid_wrapp {
     grid-template-rows: auto 150px;
+  }
+
+  .background_image {
+    background-image: url("/images/2.treat/P2_1_mobile.jpg");
+    height: 120vw;
+    z-index: 100;
+  }
+
+  #clickBox {
+    height: 120vw;
   }
 
   .sec1 .title {
@@ -1021,15 +1055,23 @@ h3 {
   }
 
   .sec2body.body1>.flexRow h4 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 
   .carousel>.carousel__list {
-    height: 40vw;
+    height: 44vw;
   }
 
   .sec2body.body1>div:nth-child(3) {
     width: 100%;
+  }
+
+  .carousel>.carousel__list .carousel__item[data-pos="-1"] {
+    transform: translate3d(-30%, 0, -100px);
+  }
+
+  .carousel>.carousel__list .carousel__item[data-pos="1"] {
+    transform: translate3d(30%, 0, -100px);
   }
 
   /* body2 */
@@ -1114,7 +1156,7 @@ h3 {
     font-size: 0.8rem;
     top: 0;
     left: 0;
-    padding: 10px 0 0;
+    padding: 25px 0 0;
   }
 
   .body3>.skinBox .noteRight {
@@ -1124,6 +1166,7 @@ h3 {
   .body3>.skinBox p {
     line-height: 1;
   }
+
   .body3>.skinBox .stickTag {
     display: none;
   }
@@ -1132,14 +1175,16 @@ h3 {
   .carousel>.carousel__list .carousel__item {
     height: 44vw;
   }
-  .scroller>img{
+
+  .scroller>img {
     width: 50%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
-  .scrollerLine{
+
+  .scrollerLine {
     height: 44vw;
   }
 

@@ -131,10 +131,7 @@ a{
 .imgCircle.circle1{
   top: -20%;
 }
-.imgCircle.circle3{
-  top: 20%;
-}
-.imgCircle.circle4{
+.imgCircle.circle3, .imgCircle.circle4{
   top: 20%;
 }
 .imgLeft{
@@ -148,6 +145,9 @@ a{
 }
 .contentRight{
   grid-column: 7/12;
+  display: flex;
+  flex-direction: column;
+
 }
 .subtitleBox{
   margin: 10% 0 5%;
@@ -158,6 +158,9 @@ a{
   position: relative;
   z-index: 101;
 }
+#subtitleBox1,#subtitleBox3{
+  width: 620px;
+}
 .subtitleBox>img{
   position:absolute;
 }
@@ -165,8 +168,8 @@ a{
   width: 100%;
   max-width: 100px;
   height: auto;
-  right: 460px;
-  top: -55%;
+  right: 445px;
+  top: -93px;
 }
 #subtitleBox2>img{
   width: 100%;
@@ -179,8 +182,8 @@ a{
   width: 100%;
   max-width: 100px;
   height: auto;
-  right: 525px;
-  top: -51%;
+  right: 515px;
+  top: -85px;
 }
 #subtitleBox4>img{
   max-width: 100px;
@@ -219,7 +222,7 @@ a{
   text-align: center;
 }
 .sec3{
-  margin: 10rem 0 0;
+  margin: 5rem 0 0;
 }
 .sec3.grid_wrapp{
   grid-template-rows: auto auto auto;
@@ -466,10 +469,13 @@ a{
   column-gap: 0px;
   height: 60vw;
 }
+#subtitleBox1,#subtitleBox3{
+  width: 493px;
+}
 #subtitleBox1 img {
   max-width: 70px;
-  right: 365px;
-  top: -65px;
+  right: 355px;
+  top: -70px;
 }
 #subtitleBox2>img{
   max-width: 70px;
@@ -478,15 +484,12 @@ a{
 }
 #subtitleBox3>img{
   max-width: 80px;
-  right: 420px;
-  top: -51%;
+  right: 410px;
+  top: -68px;
 }
 #subtitleBox4>img{
   max-width: 20px;
   top: -85px;
-}
-.sec3 {
-  margin: 10rem 0 0;
 }
 .sec4body {
   margin: 8rem 0 3rem;
@@ -528,9 +531,15 @@ a{
     column-gap: 5px;
     height: 65vw;
   }
+  .contentRight{
+    align-items: flex-end;
+  }
+  #subtitleBox1,#subtitleBox3{
+    width: 280px;
+  }
   #subtitleBox1 img {
     max-width: 50px;
-    right: 260px;
+    right: 250px;
     top: -54px;
   }
   #subtitleBox2>img{
@@ -540,7 +549,7 @@ a{
   }
   #subtitleBox3>img{
     max-width: 60px;
-    right: 290px;
+    right: 270px;
     top: -55px;
   }
   #subtitleBox4>img{
@@ -570,7 +579,6 @@ a{
 #subtitleBox1 + .leftPadding{
   position: relative;
   width: 120%;
-  right: 21%;
 }
 .rightPadding {
   padding-right: 3%;
@@ -673,7 +681,8 @@ a{
 }
 
 #subtitleBox1,#subtitleBox2,#subtitleBox3,#subtitleBox4 {
-  margin: 4rem 0 2rem;
+  width: 310px;
+  margin: 4rem auto 2rem;
 }
 #subtitleBox1>h3,#subtitleBox2>h3,#subtitleBox3>h3,#subtitleBox4>h3 {
   text-align: center;
@@ -689,23 +698,21 @@ a{
 }
 #subtitleBox1 img {
   max-width: 40px;
-  right: 0px;
-  left: 15%;
-  top: -50%;
+  top: -34px;
+  left: 26px;
 }
 #subtitleBox2>img{
   max-width: 38px;
-  left: 0px;
+  left: -12px;
   top: -45px;
 }
 #subtitleBox3>img{
   max-width: 45px;
-  right: 0px;
-  left: 8%;
+  left: 12px;
 }
 #subtitleBox4>img{
   max-width: 10px;
-  left: 13%;
+  left: 30px;
   top: -45px;
 }
 

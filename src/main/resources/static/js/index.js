@@ -45,7 +45,7 @@ function sec1resize(element) {
 function deviceDimensions() {
   c_width = document.documentElement.clientWidth;
   c_height = document.documentElement.clientHeight;
-  console.log("c_height", c_height);
+  // console.log("c_height", c_height);
 }
 // 부모 요소의 높이 구하기
 function getParentHeight() {

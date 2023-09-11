@@ -24,8 +24,8 @@
       <section id="sec1" class="sec1 grid_wrapp">
         <!-- header-->
         <%@ include file="header/header.jsp" %>
-          <img id="background_image" class="background_image" src="/images/2.treat/P2_1.png" alt="main image"
-            usemap="#imageMap" />
+          <div id="background_image" class="background_image" 
+          alt="main image"></div>
           <div id="clickBox">
             <a class="hotspot"
               data-content="Forehead <span class='fontRed'><span class='logo'>Bonetta</span> Volume</span>"></a>
