@@ -16,4 +16,11 @@ public class MainController {
     return "treat";
   }
 
+  @GetMapping("learn")
+  public String learn(){
+    System.out.println("learn 진입");
+
+    return "learn";
+  }
+
 }
